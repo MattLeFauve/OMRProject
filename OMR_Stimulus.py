@@ -6,7 +6,7 @@ mywin = visual.Window([800,600], monitor="testMonitor", units="deg", fullscr = T
 #Create OMR Stimuli
 TIME = 10 #this is seconds of stimulus display and should be changed based on experimental needs (See Table 2) 
 SPEED = 1.033 #1.033 is adult optimal, 1.04 is larvae optimal. See table for additional speeds. 
-grating = visual.RadialStim(win=mywin, mask='circle', tex='saw',size=20, rgb=[1,1,1],pos=[0,0],angularCycles = 4, angularRes = 3600, contrast = -1.0) #angularCycles are the number of black/white bars presented by the stimulus. Adult optimal is 12 angular cycles, larvae optimal is 16 angular cycles (See Table 1).  
+grating = visual.RadialStim(win=mywin, mask='circle', tex='saw',size=20, color=[1,1,1],pos=[0,0],angularCycles = 4, angularRes = 3600, contrast = -1.0) #angularCycles are the number of black/white bars presented by the stimulus. Adult optimal is 12 angular cycles, larvae optimal is 16 angular cycles (See Table 1).  
 fixation = visual.GratingStim(win=mywin, size=999, pos=[0,0], sf=0, rgb=[0.5,0.5,0.5])
 timer = core.CountdownTimer(TIME)
 #draw the stimuli and update the window. The phase is always advanced by 0.05 of a cycle. 
